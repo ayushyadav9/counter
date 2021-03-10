@@ -1,0 +1,31 @@
+{%extends 'home.html'%}
+
+{%block headblock%}
+<title>Counter</title>
+{%load static%}
+<link rel="stylesheet" href="{%static "counter.css" %}">
+{%endblock%}
+
+{%block bodyblock%}
+<div class="container">
+<h1>Lets count</h1>
+
+  <form method="POST">
+    {%csrf_token%}
+    {{form1.as_p}}
+    <input type="submit" value="Count">
+  </form>
+  <form method="post">
+    {%csrf_token%}
+    {{form2.as_p}}
+    <input type="submit" value="Change">
+  </form>
+  <form method="post">
+    {{form3.as_p}}
+    {%csrf_token%}
+    <input type="submit" value="Find">
+  </form>
+
+</div>
+
+{%endblock%}
