@@ -2,7 +2,7 @@ from django.db import models
 # Create your models here.
 
 class WordsModel(models.Model):
-    method=models.CharField(blank=True,max_length=100,choices=[("With Spaces","With Spaces"),("Without Spaces","Without Spaces"),("Characteres","Characteres"),("Words","Words"),("Sentences","Sentences")])
+    method=models.CharField(blank=True,max_length=102,choices=[("With Spaces","With Spaces"),("Without Spaces","Without Spaces"),("Characteres","Characteres"),("Words","Words"),("Sentences","Sentences")])
     text=models.TextField(blank=True)
     result=models.CharField(blank=True,max_length=100)
 
